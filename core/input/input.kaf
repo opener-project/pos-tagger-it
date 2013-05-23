@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KAF xml:lang="it" version="v1.opener">
+  <kafHeader>
+    <fileDesc filename="input" filetype="TXT" />
+    <linguisticProcessors layer="text">
+      <lp name="openlp-it-sent" version="1.0" timestamp="2013-05-17T13:29:31Z"/>
+      <lp name="openlp-it-tok" version="1.0" timestamp="2013-05-17T13:29:31Z"/>
+    </linguisticProcessors>
+  </kafHeader>
+  <text>
+    <wf wid="w1" sent="1" para="1">Ho</wf>
+    <wf wid="w2" sent="1" para="1">soggiornato</wf>
+    <wf wid="w3" sent="1" para="1">in</wf>
+    <wf wid="w4" sent="1" para="1">questo</wf>
+    <wf wid="w5" sent="1" para="1">hotel</wf>
+    <wf wid="w6" sent="1" para="1">per</wf>
+    <wf wid="w7" sent="1" para="1">tre</wf>
+    <wf wid="w8" sent="1" para="1">notti</wf>
+    <wf wid="w9" sent="1" para="1">ad</wf>
+    <wf wid="w10" sent="1" para="1">aprile</wf>
+    <wf wid="w11" sent="1" para="1">.</wf>
+    <wf wid="w12" sent="2" para="1">L'</wf>
+    <wf wid="w13" sent="2" para="1">hotel</wf>
+    <wf wid="w14" sent="2" para="1">è</wf>
+    <wf wid="w15" sent="2" para="1">ristrutturato</wf>
+    <wf wid="w16" sent="2" para="1">ed</wf>
+    <wf wid="w17" sent="2" para="1">in</wf>
+    <wf wid="w18" sent="2" para="1">pieno</wf>
+    <wf wid="w19" sent="2" para="1">centro</wf>
+    <wf wid="w20" sent="2" para="1">.</wf>
+    <wf wid="w21" sent="3" para="1">Ho</wf>
+    <wf wid="w22" sent="3" para="1">prenotato</wf>
+    <wf wid="w23" sent="3" para="1">una</wf>
+    <wf wid="w24" sent="3" para="1">stanza</wf>
+    <wf wid="w25" sent="3" para="1">singola</wf>
+    <wf wid="w26" sent="3" para="1">.</wf>
+    <wf wid="w27" sent="4" para="1">Il</wf>
+    <wf wid="w28" sent="4" para="1">letto</wf>
+    <wf wid="w29" sent="4" para="1">era</wf>
+    <wf wid="w30" sent="4" para="1">ad</wf>
+    <wf wid="w31" sent="4" para="1">una</wf>
+    <wf wid="w32" sent="4" para="1">piazza</wf>
+    <wf wid="w33" sent="4" para="1">e</wf>
+    <wf wid="w34" sent="4" para="1">mezzo</wf>
+    <wf wid="w35" sent="4" para="1">(</wf>
+    <wf wid="w36" sent="4" para="1">molto</wf>
+    <wf wid="w37" sent="4" para="1">comodo</wf>
+    <wf wid="w38" sent="4" para="1">)</wf>
+    <wf wid="w39" sent="4" para="1">tv</wf>
+    <wf wid="w40" sent="4" para="1">a</wf>
+    <wf wid="w41" sent="4" para="1">schermo</wf>
+    <wf wid="w42" sent="4" para="1">piatto</wf>
+    <wf wid="w43" sent="4" para="1">con</wf>
+    <wf wid="w44" sent="4" para="1">tutti</wf>
+    <wf wid="w45" sent="4" para="1">i</wf>
+    <wf wid="w46" sent="4" para="1">principali</wf>
+    <wf wid="w47" sent="4" para="1">canali</wf>
+    <wf wid="w48" sent="4" para="1">bagno</wf>
+    <wf wid="w49" sent="4" para="1">spazioso</wf>
+    <wf wid="w50" sent="4" para="1">con</wf>
+    <wf wid="w51" sent="4" para="1">una</wf>
+    <wf wid="w52" sent="4" para="1">comoda</wf>
+    <wf wid="w53" sent="4" para="1">doccia</wf>
+    <wf wid="w54" sent="4" para="1">.</wf>
+    <wf wid="w55" sent="5" para="1">Gli</wf>
+    <wf wid="w56" sent="5" para="1">aspetti</wf>
+    <wf wid="w57" sent="5" para="1">positivi</wf>
+    <wf wid="w58" sent="5" para="1">sono</wf>
+    <wf wid="w59" sent="5" para="1">:</wf>
+    <wf wid="w60" sent="5" para="1">colazione</wf>
+    <wf wid="w61" sent="5" para="1">con</wf>
+    <wf wid="w62" sent="5" para="1">frutta</wf>
+    <wf wid="w63" sent="5" para="1">e</wf>
+    <wf wid="w64" sent="5" para="1">cornetti</wf>
+    <wf wid="w65" sent="5" para="1">.</wf>
+  </text>
+</KAF>
