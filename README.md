@@ -9,7 +9,7 @@ It has been developed by the IXA NLP Group (ixa.si.ehu.es).
 
 Add this line to your application's Gemfile:
 
-    gem 'EHU-pos-tagger_EN_kernel', :git=>"git@github.com/opener-project/EHU-pos-tagger_EN_kernel.git"
+    gem 'Synthema-pos-tagger_IT_kernel', :git=>"git@github.com/opener-project/Synthema-pos-tagger_IT_kernel.git"
 
 And then execute:
 
@@ -17,7 +17,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem specific_install EHU-pos-tagger_EN_kernel -l https://github.com/opener-project/EHU-pos-tagger_EN_kernel.git
+    $ gem specific_install Synthema-pos-tagger_IT_kernel -l https://github.com/opener-project/Synthema-pos-tagger_IT_kernel.git
 
 
 If you dont have specific_install already:
@@ -31,7 +31,7 @@ Once installed as a gem you can access the gem from anywhere:
 
 TODO: Change output below as needed
 ````shell
-echo "foo" | EHU-pos-tagger_EN_kernel
+echo "foo" | Synthema-pos-tagger_IT_kernel
 ````
 
 Will output
@@ -55,19 +55,15 @@ Contents
 
 The contents of the module are the following:
 
-    + formatter.xml           Apache OpenNLP code formatter for Eclipse SDK
-    + pom.xml                 maven pom file which deals with everything related to compilation and execution of the module
-    + src/                    java source code of the module
-    + Furthermore, the installation process, as described in the README.md, will generate another directory:
-    target/                 it contains binary executable and other directories
+    + syn_postagger_lite_IT.jar     Synthema pos-tagger core
 
 
 INSTALLATION
 ============
 
-Installing the ehu-pos requires the following steps:
+Installing the synthema-postagger requires the following steps:
 
-If you already have installed in your machine JDK6 and MAVEN 3, please go to step 3
+If you already have installed in your machine JDK6, please go to step 2
 directly. Otherwise, follow these steps:
 
 1. Install JDK 1.6
@@ -95,95 +91,28 @@ java -version
 
 You should now see that your jdk is 1.6
 
-2. Install MAVEN 3
-------------------
 
-Download MAVEN 3 from
-
-````shell
-wget http://apache.rediris.es/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
-````
-
-Now you need to configure the PATH. For Bash Shell:
-
-````shell
-export MAVEN_HOME=/home/ragerri/local/apache-maven-3.0.5
-export PATH=${MAVEN_HOME}/bin:${PATH}
-````
-
-For tcsh shell:
-
-````shell
-setenv MAVEN3_HOME ~/local/apache-maven-3.0.5
-setenv PATH ${MAVEN3}/bin:{PATH}
-````
-
-If you re-login into your shell and run the command
-
-````shell
-mvn -version
-````
-
-You should see reference to the MAVEN version you have just installed plus the JDK 6 that is using.
-
-3. Get module source code
+2. Get module source code
 --------------------------
 
 ````shell
-git clone git@github.com:opener-project/EHU-pos-tagger_EN_kernel.git
+git clone git@github.com:opener-project/Synthema-pos-tagger_IT_kernel.git
 ````
 
-4. Download models and other resources
+3. Download models and other resources
 --------------------------------------
 
-To perform English lemmatization the module uses three different methods for English and two for Spanish:
+To perform Italian lemmatization the module uses a plain text dictionary: lemma_pos.dict.
 
-+ English:
-    + WordNet-3.0. You will to give $repo/core/wn30/dict as a value of the -w option when running ehu-pos (see point 7. below).
-    + Plain text dictionary: en-lemmas.dict is a "Word POStag lemma" dictionary in plain text to perform lemmatization.
-    + Morfologik-stemming: english.dict is the same as en-lemmas.dict but binarized as a finite state automata using the
-      morfologik-stemming project (see NOTICE file for details) This method uses 10% of RAM with respect to the plain text
-     dictionary and works 2x faster.
 
-+ Spanish:
-    + Plain text dictionary: es-lemmas.dict.
-    + Morfologik stemming: spanish.dict.
-
-To get WordNet go to:
-
-````shell
-wget http://wordnetcode.princeton.edu/3.0/WordNet-3.0.tar.gz
-````
-
-5. Move into main directory
+4. Move into main directory
 ---------------------------
 
 ````shell
 cd $REPO/core
 ````
 
-6. Install module using maven
------------------------------
-
-````shell
-mvn clean package
-````
-
-This step will create a directory called target/ which contains various directories and files.
-Most importantly, there you will find the module executable:
-
-ehu-pos-1.0.jar
-
-This executable contains every dependency the module needs, so it is completely portable as long
-as you have a JVM 1.6 installed.
-
-To install the module in the local maven repository, usually located at ~/.m2/, execute:
-
-````shell
-mvn clean install
-````
-
-7. USING ehu-pos
+5. USING Synthema-postagger
 ================
 
 The program accepts tokenized text in KAF format as standard input and outputs KAF.
@@ -191,37 +120,25 @@ The program accepts tokenized text in KAF format as standard input and outputs K
 You can get the tokenized input for this module from Vicom-tokenizer module. To run the program execute:
 
 ````shell
-cat wordforms.kaf | java -jar $PATH/target/ehu-pos-1.0.jar -l $lang
+java -jar $PATH/target/syn_postagger_lite_IT.jar -op tagging -k $kaf -m $model -d $lemma_pos.dict
 ````
 
-Current paramaters for specifying the language (to load the relevant models) is mandatory. See
+See
 
 ````shell
-java -jar $PATH/target/ehu-pos-1.0.jar -help
+java -jar $PATH/target/ehu-pos-1.0.jar
 ````
 
 for more options running the module
 
-
-GENERATING JAVADOC
-==================
-
-You can also generate the javadoc of the module by executing:
-
-````shell
-mvn javadoc:jar
-````
-
-Which will create a jar file target/ehu-pos-1.0-javadoc.jar
 
 
 Contact information
 ===================
 
 ````shell
-Rodrigo Agerri
-IXA NLP Group
-University of the Basque Country (UPV/EHU)
-E-20018 Donostia-San Sebastián
-rodrigo.agerri@ehu.es
+Francesco Rubino
+Synthema srl
+Pisa (Italy)
+francesco.rubino@synthema.it
 ````
