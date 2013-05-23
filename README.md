@@ -31,7 +31,7 @@ Once installed as a gem you can access the gem from anywhere:
 
 TODO: Change output below as needed
 ````shell
-echo "foo" | Synthema-pos-tagger_IT_kernel
+echo "foo" | synthema-pos-tagger_IT_kernel
 ````
 
 Will output
@@ -120,7 +120,7 @@ The program accepts tokenized text in KAF format as standard input and outputs K
 You can get the tokenized input for this module from Vicom-tokenizer module. To run the program execute:
 
 ````shell
-java -jar $PATH/target/syn_postagger_lite_IT.jar -op tagging -k $kaf -m $model -d $lemma_pos.dict
+cat file.kaf | java -jar $PATH/target/syn-postagger_kernel_IT.jar
 ````
 
 See
