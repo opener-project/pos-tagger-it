@@ -27,7 +27,7 @@ import java.util.Set;
 
 public class Lemmatizer {
 
-	private static final String filename="/lemmatizer.dict";
+	private static final String filename="/lemma_pos.dict";
 	private static Hashtable<String, String> wordToLemma;
 
 	public Lemmatizer() {

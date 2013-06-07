@@ -25,6 +25,13 @@ public class CLI {
 		// set internal xml validation (it works only via xsd schema)
 		saxparser.setXMLValidate(false);
 
+		boolean fixedTimestamp=false;
+		for(String arg:args){
+			if(arg.equalsIgnoreCase("-t")){
+				fixedTimestamp=true;
+			}
+		}
+		
 		// parse file
 		saxparser.parseFile(System.in);
 
@@ -88,7 +95,7 @@ public class CLI {
 
 		String timestamp = getCurrentDate();
 		KafMetadata metadata = saxparser.getMetadata();
-		metadata.addLayer("terms", "opennlp-it-pos", "1.0", timestamp);
+		metadata.addLayer("terms", "opennlp-it-pos", "1.0", fixedTimestamp?timestamp.replaceAll("[0-9]", "0"):timestamp);
 
 		// KAF WRITER
 		saxparser.writeKafToStream(System.out, false);
