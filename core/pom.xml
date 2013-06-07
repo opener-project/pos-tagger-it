@@ -4,7 +4,7 @@
   <groupId>it.synthema.opener</groupId>
   <artifactId>synthema-pos-tagger_it</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>synthema-pos-tagger_it</name>
   <url>http://maven.apache.org</url>
 
@@ -84,7 +84,7 @@
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<manifestEntries>
-										<Main-Class>it.synthema.CHANGE_THIS_TO_MAIN_CLASS</Main-Class>
+										<Main-Class>it.synthema.opener.postagger.it.CLI</Main-Class>
 									</manifestEntries>
 								</transformer>
 							</transformers>

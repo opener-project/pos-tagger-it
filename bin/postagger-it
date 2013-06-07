@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require_relative '../lib/opener/postagger/it'
+
+kernel = Opener::Postagger::It.new(:language=>"it")
+puts kernel.run

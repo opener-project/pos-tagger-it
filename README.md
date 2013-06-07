@@ -1,44 +1,33 @@
-# Opener::Kernel::SYNTHEMA::POSTagger::IT
+# Opener::Kernel::SYNTHEMA::POSTagger::IT   (name requires update)
 
 This module uses Apache OpenNLP programatically to perform POS tagging.
 It has been developed by the IXA NLP Group (ixa.si.ehu.es).
 
 + Italian Perceptron models have been trained using a SyNTHEMA corpus.
 
++ Code refactoring done by Vicomtech (maven, some refactoring to java packages/classes, and ruby wrapping following the new naming convention)
+
 ## Installation
 
-Add this line to your application's Gemfile:
+Now the inner Java core uses Maven to build itself.
+Provided you have Apache Maven 3 already installed, clone the repository, enter the just created directory, and simply issue:
 
-    gem 'Synthema-pos-tagger_IT_kernel', :git=>"git@github.com/opener-project/Synthema-pos-tagger_IT_kernel.git"
+	$ sudo rake install
 
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem specific_install Synthema-pos-tagger_IT_kernel -l https://github.com/opener-project/Synthema-pos-tagger_IT_kernel.git
-
-
-If you dont have specific_install already:
-
-    $ gem install specific_install
+It should be all.
 
 ## Usage
 
-Once installed as a gem you can access the gem from anywhere:
+Once installed as a gem you can access it from anywhere:
 
+The command reads a KAF file with text layer from standard input:
 
-TODO: Change output below as needed
 ````shell
-echo "foo" | synthema-pos-tagger_IT_kernel
+cat SOME_KAF_TOKENIZED_FILE | tokenizer_it
 ````
+And outputs the same KAF with the term layer added to the standard output.
+The command can also receive a -t argument to return a fixed timestamp (for test purposes)
 
-Will output
-
-````
-oof
-````
 
 ## Contributing
 
@@ -47,90 +36,6 @@ oof
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin features/my-new-feature`)
 5. If you're confident, merge your changes into master.
-
-
-
-Contents
-========
-
-The contents of the module are the following:
-
-    + syn_postagger_lite_IT.jar     Synthema pos-tagger core
-
-
-INSTALLATION
-============
-
-Installing the synthema-postagger requires the following steps:
-
-If you already have installed in your machine JDK6, please go to step 2
-directly. Otherwise, follow these steps:
-
-1. Install JDK 1.6
--------------------
-
-If you do not install JDK 1.6 in a default location, you will probably need to configure the PATH in .bashrc or .bash_profile:
-
-````shell
-export JAVA_HOME=/yourpath/local/java6
-export PATH=${JAVA_HOME}/bin:${PATH}
-````
-
-If you use tcsh you will need to specify it in your .login as follows:
-
-````shell
-setenv JAVA_HOME /usr/java/java16
-setenv PATH ${JAVA_HOME}/bin:${PATH}
-````
-
-If you re-login into your shell and run the command
-
-````shell
-java -version
-````
-
-You should now see that your jdk is 1.6
-
-
-2. Get module source code
---------------------------
-
-````shell
-git clone git@github.com:opener-project/Synthema-pos-tagger_IT_kernel.git
-````
-
-3. Download models and other resources
---------------------------------------
-
-To perform Italian lemmatization the module uses a plain text dictionary: lemma_pos.dict.
-
-
-4. Move into main directory
----------------------------
-
-````shell
-cd $REPO/core
-````
-
-5. USING Synthema-postagger
-================
-
-The program accepts tokenized text in KAF format as standard input and outputs KAF.
-
-You can get the tokenized input for this module from Vicom-tokenizer module. To run the program execute:
-
-````shell
-cat file.kaf | java -jar $PATH/target/syn-postagger_kernel_IT.jar
-````
-
-See
-
-````shell
-java -jar $PATH/target/ehu-pos-1.0.jar
-````
-
-for more options running the module
-
 
 
 Contact information
