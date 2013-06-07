@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<KAF xml:lang="it">
+<KAF version="v1.opener" xml:lang="it">
   <kafHeader>
     <fileDesc filename="input" filetype="TXT"/>
     <linguisticProcessors layer="text">
