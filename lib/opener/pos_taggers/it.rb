@@ -16,11 +16,11 @@ module Opener
       protected
       
       def core_dir
-        File.expand_path("../../../core/target", File.dirname(__FILE__))
+        File.expand_path("../../../core", File.dirname(__FILE__))
       end
       
       def kernel
-        core_dir+'/synthema-pos-tagger_it-1.0.jar'
+        core_dir+'/target/synthema-pos-tagger_it-1.0.jar'
       end      
       
     end
