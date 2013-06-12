@@ -1,5 +1,5 @@
 Given /^input file's language "(.*?)"$/ do |language|
-  @kernel = Opener::Postagger::It.new(:language=>language.downcase)
+  @kernel = Opener::POSTaggers::IT.new
 end
 
 Given /^the file name "(.*?)"$/ do |name|

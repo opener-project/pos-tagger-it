@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../lib/opener/postagger/it'
+require_relative '../lib/opener/pos_taggers/it'
 
-kernel = Opener::Postagger::It.new(:language=>"it")
+kernel = Opener::POSTaggers::IT.new
 puts kernel.run

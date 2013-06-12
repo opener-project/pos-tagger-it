@@ -1,4 +1,4 @@
-# Opener::Kernel::SYNTHEMA::POSTagger::IT   (name requires update)
+# Opener::POSTaggers::IT 
 
 This module uses Apache OpenNLP programatically to perform POS tagging.
 It has been developed by the IXA NLP Group (ixa.si.ehu.es).
@@ -23,7 +23,7 @@ Once installed as a gem you can access it from anywhere:
 The command reads a KAF file with text layer from standard input:
 
 ````shell
-cat SOME_KAF_TOKENIZED_FILE | tokenizer_it
+cat SOME_KAF_TOKENIZED_FILE | pos-tagger-it
 ````
 And outputs the same KAF with the term layer added to the standard output.
 The command can also receive a -t argument to return a fixed timestamp (for test purposes)
