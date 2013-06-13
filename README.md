@@ -1,49 +1,65 @@
-# Opener::POSTaggers::IT 
+# Italian POS Tagger
 
-This module uses Apache OpenNLP programatically to perform POS tagging.
-It has been developed by the IXA NLP Group (ixa.si.ehu.es).
+This repository contains the source code for the Italian POS tagger of the
+OpeNER project.
 
-+ Italian Perceptron models have been trained using a SyNTHEMA corpus.
+## Requirements
 
-+ Code refactoring done by Vicomtech (maven, some refactoring to java packages/classes, and ruby wrapping following the new naming convention)
+* Java 1.7 or newer
+* Ruby 1.9.2 or newer
+* Maven
+* Bundler
 
 ## Installation
 
-Now the inner Java core uses Maven to build itself.
-Provided you have Apache Maven 3 already installed, clone the repository, enter the just created directory, and simply issue:
+Using RubyGems:
 
-	$ sudo rake install
+    gem install opener-pos-tagger-it
 
-It should be all.
+Using Bundler:
+
+    gem 'opener-pos-tagger-it',
+      :git    => 'git@github.com/opener-project/pos-tagger-it.git',
+      :branch => 'master'
+
+Using specific install:
+
+    gem install specific_install
+    gem specific_install opener-pos-tagger-it \
+        -l https://github.com/opener-project/pos-tagger-it.git
 
 ## Usage
 
-Once installed as a gem you can access it from anywhere:
-
-The command reads a KAF file with text layer from standard input:
-
-````shell
-cat SOME_KAF_TOKENIZED_FILE | pos-tagger-it
-````
-And outputs the same KAF with the term layer added to the standard output.
-The command can also receive a -t argument to return a fixed timestamp (for test purposes)
-
+    cat some_input_file.kaf | pos-tagger-it
 
 ## Contributing
 
-1. Pull it
-2. Create your feature branch (`git checkout -b features/my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin features/my-new-feature`)
-5. If you're confident, merge your changes into master.
+First make sure all the required dependencies are installed:
 
+    bundle install
 
-Contact information
-===================
+Then compile the required Java code:
 
-````shell
-Francesco Rubino
-Synthema srl
-Pisa (Italy)
-francesco.rubino@synthema.it
-````
+    bundle exec rake java:compile
+
+For this you'll need to have Java 1.7 and Maven installed. These requirements
+are verified for you before the Rake task calls Maven.
+
+## Testing
+
+To run the tests (which are powered by Cucumber), simply run the following:
+
+    bundle exec rake
+
+This will take care of verifying the requirements, installing the required Java
+packages and running the tests.
+
+For more information on the available Rake tasks run the following:
+
+    bundle exec rake -T
+
+## Structure
+
+This repository comes in two parts: a collection of Java source files and Ruby
+source files. The Java code can be found in the `core/` directory, everything
+else will be Ruby source code.
