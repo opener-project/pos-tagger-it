@@ -1,25 +1,29 @@
-require "bundler/gem_tasks"
+require 'bundler/gem_tasks'
+require 'opener/build-tools'
+require 'opener/build-tools/tasks/java'
 
-CORE = File.expand_path('../core', __FILE__)
+include Opener::BuildTools::Requirements
+include Opener::BuildTools::Java
 
-desc 'Removes all built files'
-task :clean do
-  Dir.chdir(CORE) do
-    sh 'mvn clean'
-  end
+CORE_DIRECTORY = File.expand_path('../core', __FILE__)
+
+desc 'Verifies the requirements'
+task :requirements do
+  require_executable('java')
+  require_version('java', java_version, '1.7.0')
+  require_executable('mvn')
 end
 
-desc 'Generates JAR files'
-task :generate => :clean do
-  Dir.chdir(CORE) do
-    sh "mvn package"
-  end
-end
+desc 'Alias for java:compile'
+task :compile => [:requirements, 'java:compile']
 
 desc 'Runs the tests'
-task :test => :generate do
+task :test => :compile do
   sh 'cucumber features'
 end
 
-task :build   => :generate
+desc 'Cleans the repository'
+task :clean => ['java:clean:packages']
+
+task :build   => :compile
 task :default => :test
