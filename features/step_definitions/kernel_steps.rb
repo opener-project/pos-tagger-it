@@ -20,7 +20,7 @@ Given /^I put them through the kernel$/ do
   else
     @args = ['-t', '-f', @name]
   end
-  `cat #{@input} | #{@kernel.command(@args)} > #{@output}`
+  `cat #{@input} | #{@kernel.command} -t > #{@output}`
 end
 
 Then /^the output should match the fixture "(.*?)"$/ do |filename|
