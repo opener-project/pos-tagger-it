@@ -1,4 +1,15 @@
 require 'open3'
+require 'stringio'
+require 'java'
+
+require File.expand_path('../../../../core/target/synthema-pos-tagger_it-1.1.jar', __FILE__)
+
+import 'eu.openerproject.kaf.layers.KafMetadata'
+import 'eu.openerproject.kaf.layers.KafTarget'
+import 'eu.openerproject.kaf.layers.KafTerm'
+import 'eu.openerproject.kaf.layers.KafWordForm'
+import 'eu.openerproject.kaf.reader.KafSaxParser'
+
 require_relative 'it/version'
 
 module Opener
@@ -26,15 +37,6 @@ module Opener
       end
 
       ##
-      # Builds the command used to execute the kernel.
-      #
-      # @return [String]
-      #
-      def command
-        "java -jar #{kernel} -l #{lang} #{args.join(' ')}"
-      end
-
-      ##
       # Runs the command and returns the output of STDOUT, STDERR and the
       # process information.
       #
@@ -42,48 +44,24 @@ module Opener
       # @return [Array]
       #
       def run(input)
-        return Open3.capture3(command, :stdin_data => input)
+        input  = StringIO.new(input) unless input.kind_of?(IO)
+        cli    = Java::it.synthema.opener.postagger.it.CLI.new
+        result = cli.process_to_string(input.to_inputstream, test_mode?)
+
+        return result
       end
 
       protected
 
-      ##
-      # @return [String]
-      #
-      def core_dir
-        File.expand_path("../../../core", File.dirname(__FILE__))
-      end  
+      def test_mode?
+        return options.fetch(:test, false) || args.include?("-t")
+      end
 
-      ##
-      # @return [String]
-      #
-      def kernel
-        core_dir+'/target/synthema-pos-tagger_it-1.0.jar'
-      end 
-      
       def lang
         'it'
       end
-      
+
     end # IT
   end # POSTaggers
 end # Opener
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

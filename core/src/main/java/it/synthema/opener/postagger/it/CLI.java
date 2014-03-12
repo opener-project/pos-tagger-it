@@ -1,11 +1,16 @@
 package it.synthema.opener.postagger.it;
 
-
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.List;
+
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.ByteArrayOutputStream;
+
+import java.text.SimpleDateFormat;
+import java.text.DateFormat;
 import java.util.TimeZone;
+import java.util.Date;
 
 import eu.openerproject.kaf.layers.KafMetadata;
 import eu.openerproject.kaf.layers.KafTarget;
@@ -19,24 +24,45 @@ public class CLI {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
-		KafSaxParser saxparser = new KafSaxParser();
-
-		// set internal xml validation (it works only via xsd schema)
-		saxparser.setXMLValidate(false);
-
-		boolean fixedTimestamp=false;
+    boolean fixedTimestamp = false;
 		for(String arg:args){
 			if(arg.equalsIgnoreCase("-t")){
 				fixedTimestamp=true;
 			}
 		}
-		
+
+    CLI cli = new CLI();
+    cli.process(System.in, System.out, fixedTimestamp);
+  }
+
+  public void process(){
+    process(System.in, System.out, false);
+  }
+
+  public void process(InputStream inputStream, OutputStream outputStream){
+    process(inputStream, outputStream, false);
+  }
+
+  public String processToString(InputStream inputStream){
+    return processToString(inputStream, false);
+  }
+
+  public String processToString(InputStream inputStream, Boolean fixedTimestamp){
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    process(inputStream, baos, fixedTimestamp);
+    return baos.toString();
+  }
+
+  public void process(InputStream inputStream, OutputStream outputStream, Boolean fixedTimestamp){
+		KafSaxParser saxparser = new KafSaxParser();
+		saxparser.setXMLValidate(false);
+
+
 		// parse file
-		saxparser.parseFile(System.in);
+		saxparser.parseFile(inputStream);
 
 		// wordform
-		//System.out.println("Read wordforms...");
+		// System.out.println("Read wordforms...");
 		List<KafWordForm> wordforms = saxparser.getWordList();
 		String[] words = new String[wordforms.size()];
 		for (int i = 0; i < wordforms.size(); i++) {
@@ -50,7 +76,7 @@ public class CLI {
 
 		// tagging and lemmatizer
 		Lemmatizer lemmatizer = new Lemmatizer();
-		
+
 
 		POSTagger postagger = new POSTagger();
 		List<KafTerm> terms = new ArrayList<KafTerm>();
@@ -80,7 +106,7 @@ public class CLI {
 			}
 			term.setLemma(lemma);
 			//term.setComment(words[i]);
-			
+
 			// span
 			List<KafTarget> span = new ArrayList<KafTarget>();
 			span.add(new KafTarget("w" + (i + 1)));
@@ -93,52 +119,29 @@ public class CLI {
 		}
 		saxparser.setTermList(terms);
 
-		String timestamp = getCurrentDate();
 		KafMetadata metadata = saxparser.getMetadata();
-		metadata.addLayer("terms", "opennlp-it-pos", "1.0", fixedTimestamp?timestamp.replaceAll("[0-9]", "0"):timestamp);
 
+    String timestamp;
+
+    if(fixedTimestamp == false){
+      timestamp = getTimestamp();
+    }else{
+      timestamp = "0000-00-00T00:00Z";
+    }
+		metadata.addLayer("terms", "opennlp-it-pos", "1.0", timestamp);
 		// KAF WRITER
-		saxparser.writeKafToStream(System.out, false);
-
+		saxparser.writeKafToStream(outputStream, false);
 	}
 
-	private static void printErrorMessage(String error) {
+	private void printErrorMessage(String error) {
 		System.err.println(error);
 	}
 
-	public static String getCurrentDate() {
-		Calendar c = new GregorianCalendar(TimeZone.getTimeZone("UTC"));
-		int year = c.get(Calendar.YEAR);
-		int month = c.get(Calendar.MONTH) + 1;
-		int day = c.get(Calendar.DAY_OF_MONTH);
-		int hour = c.get(Calendar.HOUR);
-		int minutes = c.get(Calendar.MINUTE);
-		int seconds = c.get(Calendar.SECOND);
-		StringBuffer timestamp_sb = new StringBuffer();
-		timestamp_sb.append(year);
-		timestamp_sb.append("-");
-		if (month < 10)
-			timestamp_sb.append("0");
-		timestamp_sb.append(month);
-		timestamp_sb.append("-");
-		if (day < 10)
-			timestamp_sb.append("0");
-		timestamp_sb.append(day);
-		timestamp_sb.append("-");
-		timestamp_sb.append("T");
-		if (hour < 10)
-			timestamp_sb.append("0");
-		timestamp_sb.append(hour);
-		timestamp_sb.append(":");
-		if (minutes < 10)
-			timestamp_sb.append("0");
-		timestamp_sb.append(minutes);
-		timestamp_sb.append(":");
-		if (seconds < 10)
-			timestamp_sb.append("0");
-		timestamp_sb.append(seconds);
-		timestamp_sb.append("Z");
-		return timestamp_sb.toString();
-	}
-
+  private String getTimestamp(){
+    TimeZone tz = TimeZone.getTimeZone("UTC");
+    DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmZ");
+    df.setTimeZone(tz);
+    String nowAsISO = df.format(new Date());
+    return nowAsISO;
+  }
 }

@@ -4,7 +4,7 @@
   <groupId>it.synthema.opener</groupId>
   <artifactId>synthema-pos-tagger_it</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.1</version>
   <name>synthema-pos-tagger_it</name>
   <url>http://maven.apache.org</url>
 

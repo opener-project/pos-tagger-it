@@ -7,7 +7,7 @@
       <lp name="openlp-it-tok" timestamp="2013-05-17T13:29:31Z" version="1.0"/>
     </linguisticProcessors>
     <linguisticProcessors layer="terms">
-      <lp name="opennlp-it-pos" timestamp="0000-00-00-T00:00:00Z" version="1.0"/>
+      <lp name="opennlp-it-pos" timestamp="0000-00-00T00:00Z" version="1.0"/>
     </linguisticProcessors>
   </kafHeader>
   <text>
@@ -80,391 +80,391 @@
   <terms>
     <term lemma="avere" morphofeat="VAU~REN1" pos="V" tid="t1" type="">
       <span>
-        <!--Ho-->
+        <!-- Ho -->
         <target id="w1"/>
       </span>
     </term>
     <term lemma="soggiornare" morphofeat="VMA~PAMS" pos="V" tid="t2" type="">
       <span>
-        <!--soggiornato-->
+        <!-- soggiornato -->
         <target id="w2"/>
       </span>
     </term>
     <term lemma="in" morphofeat="PREP" pos="P" tid="t3" type="">
       <span>
-        <!--in-->
+        <!-- in -->
         <target id="w3"/>
       </span>
     </term>
     <term lemma="questo" morphofeat="ADJ~DIMS" pos="G" tid="t4" type="">
       <span>
-        <!--questo-->
+        <!-- questo -->
         <target id="w4"/>
       </span>
     </term>
     <term lemma="hotel" morphofeat="NOU~CAMI" pos="N" tid="t5" type="">
       <span>
-        <!--hotel-->
+        <!-- hotel -->
         <target id="w5"/>
       </span>
     </term>
     <term lemma="per" morphofeat="PREP" pos="P" tid="t6" type="">
       <span>
-        <!--per-->
+        <!-- per -->
         <target id="w6"/>
       </span>
     </term>
     <term lemma="tre" morphofeat="ADJ~ORNP" pos="G" tid="t7" type="">
       <span>
-        <!--tre-->
+        <!-- tre -->
         <target id="w7"/>
       </span>
     </term>
     <term lemma="notte" morphofeat="NOU~CPFP" pos="N" tid="t8" type="">
       <span>
-        <!--notti-->
+        <!-- notti -->
         <target id="w8"/>
       </span>
     </term>
     <term lemma="ad" morphofeat="PREP" pos="P" tid="t9" type="">
       <span>
-        <!--ad-->
+        <!-- ad -->
         <target id="w9"/>
       </span>
     </term>
     <term lemma="aprile" morphofeat="NOU~CSMS" pos="N" tid="t10" type="">
       <span>
-        <!--aprile-->
+        <!-- aprile -->
         <target id="w10"/>
       </span>
     </term>
     <term lemma="." morphofeat="." pos="O" tid="t11" type="">
       <span>
-        <!--.-->
+        <!-- . -->
         <target id="w11"/>
       </span>
     </term>
     <term lemma="lo" morphofeat="ART~DNS" pos="D" tid="t12" type="">
       <span>
-        <!--L'-->
+        <!-- L' -->
         <target id="w12"/>
       </span>
     </term>
     <term lemma="hotel" morphofeat="NOU~CAMI" pos="N" tid="t13" type="">
       <span>
-        <!--hotel-->
+        <!-- hotel -->
         <target id="w13"/>
       </span>
     </term>
     <term lemma="è" morphofeat="NOU~CSMS" pos="N" tid="t14" type="">
       <span>
-        <!--è-->
+        <!-- è -->
         <target id="w14"/>
       </span>
     </term>
     <term lemma="ristrutturare" morphofeat="VMA~PAMS" pos="V" tid="t15" type="">
       <span>
-        <!--ristrutturato-->
+        <!-- ristrutturato -->
         <target id="w15"/>
       </span>
     </term>
     <term lemma="ed" morphofeat="CONJ" pos="Q" tid="t16" type="">
       <span>
-        <!--ed-->
+        <!-- ed -->
         <target id="w16"/>
       </span>
     </term>
     <term lemma="in" morphofeat="PREP" pos="P" tid="t17" type="">
       <span>
-        <!--in-->
+        <!-- in -->
         <target id="w17"/>
       </span>
     </term>
     <term lemma="pieno" morphofeat="NOU~CSMS" pos="N" tid="t18" type="">
       <span>
-        <!--pieno-->
+        <!-- pieno -->
         <target id="w18"/>
       </span>
     </term>
     <term lemma="centro" morphofeat="NOU~CSMS" pos="N" tid="t19" type="">
       <span>
-        <!--centro-->
+        <!-- centro -->
         <target id="w19"/>
       </span>
     </term>
     <term lemma="." morphofeat="." pos="O" tid="t20" type="">
       <span>
-        <!--.-->
+        <!-- . -->
         <target id="w20"/>
       </span>
     </term>
     <term lemma="avere" morphofeat="VAU~REN1" pos="V" tid="t21" type="">
       <span>
-        <!--Ho-->
+        <!-- Ho -->
         <target id="w21"/>
       </span>
     </term>
     <term lemma="prenotare" morphofeat="VMA~PAMS" pos="V" tid="t22" type="">
       <span>
-        <!--prenotato-->
+        <!-- prenotato -->
         <target id="w22"/>
       </span>
     </term>
     <term lemma="uno" morphofeat="ART~IFS" pos="D" tid="t23" type="">
       <span>
-        <!--una-->
+        <!-- una -->
         <target id="w23"/>
       </span>
     </term>
     <term lemma="stanza" morphofeat="NOU~CSFS" pos="N" tid="t24" type="">
       <span>
-        <!--stanza-->
+        <!-- stanza -->
         <target id="w24"/>
       </span>
     </term>
     <term lemma="singolo" morphofeat="ADJ~QUFS" pos="G" tid="t25" type="">
       <span>
-        <!--singola-->
+        <!-- singola -->
         <target id="w25"/>
       </span>
     </term>
     <term lemma="." morphofeat="." pos="O" tid="t26" type="">
       <span>
-        <!--.-->
+        <!-- . -->
         <target id="w26"/>
       </span>
     </term>
     <term lemma="lo" morphofeat="ART~DMS" pos="D" tid="t27" type="">
       <span>
-        <!--Il-->
+        <!-- Il -->
         <target id="w27"/>
       </span>
     </term>
     <term lemma="letto" morphofeat="NOU~CSMS" pos="N" tid="t28" type="">
       <span>
-        <!--letto-->
+        <!-- letto -->
         <target id="w28"/>
       </span>
     </term>
     <term lemma="essere" morphofeat="VAU~IMN3" pos="V" tid="t29" type="">
       <span>
-        <!--era-->
+        <!-- era -->
         <target id="w29"/>
       </span>
     </term>
     <term lemma="ad" morphofeat="PREP" pos="P" tid="t30" type="">
       <span>
-        <!--ad-->
+        <!-- ad -->
         <target id="w30"/>
       </span>
     </term>
     <term lemma="uno" morphofeat="ART~IFS" pos="D" tid="t31" type="">
       <span>
-        <!--una-->
+        <!-- una -->
         <target id="w31"/>
       </span>
     </term>
     <term lemma="piazza" morphofeat="NOU~CSFS" pos="N" tid="t32" type="">
       <span>
-        <!--piazza-->
+        <!-- piazza -->
         <target id="w32"/>
       </span>
     </term>
     <term lemma="e" morphofeat="CONJ" pos="Q" tid="t33" type="">
       <span>
-        <!--e-->
+        <!-- e -->
         <target id="w33"/>
       </span>
     </term>
     <term lemma="mezzo" morphofeat="NOU~CSMS" pos="N" tid="t34" type="">
       <span>
-        <!--mezzo-->
+        <!-- mezzo -->
         <target id="w34"/>
       </span>
     </term>
     <term lemma="(" morphofeat="PUNCT" pos="O" tid="t35" type="">
       <span>
-        <!--(-->
+        <!-- ( -->
         <target id="w35"/>
       </span>
     </term>
     <term lemma="molto" morphofeat="ADVB" pos="A" tid="t36" type="">
       <span>
-        <!--molto-->
+        <!-- molto -->
         <target id="w36"/>
       </span>
     </term>
     <term lemma="comodo" morphofeat="ADJ~QUMS" pos="G" tid="t37" type="">
       <span>
-        <!--comodo-->
+        <!-- comodo -->
         <target id="w37"/>
       </span>
     </term>
     <term lemma=")" morphofeat="PUNCT" pos="O" tid="t38" type="">
       <span>
-        <!--)-->
+        <!-- ) -->
         <target id="w38"/>
       </span>
     </term>
     <term lemma="tv" morphofeat="NOU~CAFI" pos="N" tid="t39" type="">
       <span>
-        <!--tv-->
+        <!-- tv -->
         <target id="w39"/>
       </span>
     </term>
     <term lemma="a" morphofeat="PREP" pos="P" tid="t40" type="">
       <span>
-        <!--a-->
+        <!-- a -->
         <target id="w40"/>
       </span>
     </term>
     <term lemma="schermo" morphofeat="NOU~CSMS" pos="N" tid="t41" type="">
       <span>
-        <!--schermo-->
+        <!-- schermo -->
         <target id="w41"/>
       </span>
     </term>
     <term lemma="piatto" morphofeat="ADJ~QUMS" pos="G" tid="t42" type="">
       <span>
-        <!--piatto-->
+        <!-- piatto -->
         <target id="w42"/>
       </span>
     </term>
     <term lemma="con" morphofeat="PREP" pos="P" tid="t43" type="">
       <span>
-        <!--con-->
+        <!-- con -->
         <target id="w43"/>
       </span>
     </term>
     <term lemma="tutto" morphofeat="ADJ~INMP" pos="G" tid="t44" type="">
       <span>
-        <!--tutti-->
+        <!-- tutti -->
         <target id="w44"/>
       </span>
     </term>
     <term lemma="lo" morphofeat="ART~DMP" pos="D" tid="t45" type="">
       <span>
-        <!--i-->
+        <!-- i -->
         <target id="w45"/>
       </span>
     </term>
     <term lemma="principale" morphofeat="ADJ~QUNP" pos="G" tid="t46" type="">
       <span>
-        <!--principali-->
+        <!-- principali -->
         <target id="w46"/>
       </span>
     </term>
     <term lemma="canale" morphofeat="NOU~CPMP" pos="N" tid="t47" type="">
       <span>
-        <!--canali-->
+        <!-- canali -->
         <target id="w47"/>
       </span>
     </term>
     <term lemma="bagno" morphofeat="NOU~CSMS" pos="N" tid="t48" type="">
       <span>
-        <!--bagno-->
+        <!-- bagno -->
         <target id="w48"/>
       </span>
     </term>
     <term lemma="spazioso" morphofeat="ADJ~QUMS" pos="G" tid="t49" type="">
       <span>
-        <!--spazioso-->
+        <!-- spazioso -->
         <target id="w49"/>
       </span>
     </term>
     <term lemma="con" morphofeat="PREP" pos="P" tid="t50" type="">
       <span>
-        <!--con-->
+        <!-- con -->
         <target id="w50"/>
       </span>
     </term>
     <term lemma="uno" morphofeat="ART~IFS" pos="D" tid="t51" type="">
       <span>
-        <!--una-->
+        <!-- una -->
         <target id="w51"/>
       </span>
     </term>
     <term lemma="comodo" morphofeat="ADJ~QUFS" pos="G" tid="t52" type="">
       <span>
-        <!--comoda-->
+        <!-- comoda -->
         <target id="w52"/>
       </span>
     </term>
     <term lemma="doccia" morphofeat="NOU~CSFS" pos="N" tid="t53" type="">
       <span>
-        <!--doccia-->
+        <!-- doccia -->
         <target id="w53"/>
       </span>
     </term>
     <term lemma="." morphofeat="." pos="O" tid="t54" type="">
       <span>
-        <!--.-->
+        <!-- . -->
         <target id="w54"/>
       </span>
     </term>
     <term lemma="lo" morphofeat="ART~DMP" pos="D" tid="t55" type="">
       <span>
-        <!--Gli-->
+        <!-- Gli -->
         <target id="w55"/>
       </span>
     </term>
     <term lemma="aspetto" morphofeat="NOU~CPMP" pos="N" tid="t56" type="">
       <span>
-        <!--aspetti-->
+        <!-- aspetti -->
         <target id="w56"/>
       </span>
     </term>
     <term lemma="positivo" morphofeat="ADJ~QUMP" pos="G" tid="t57" type="">
       <span>
-        <!--positivi-->
+        <!-- positivi -->
         <target id="w57"/>
       </span>
     </term>
     <term lemma="essere" morphofeat="VAU~REN1" pos="V" tid="t58" type="">
       <span>
-        <!--sono-->
+        <!-- sono -->
         <target id="w58"/>
       </span>
     </term>
     <term lemma=":" morphofeat=":" pos="O" tid="t59" type="">
       <span>
-        <!--:-->
+        <!-- : -->
         <target id="w59"/>
       </span>
     </term>
     <term lemma="colazione" morphofeat="NOU~CSFS" pos="N" tid="t60" type="">
       <span>
-        <!--colazione-->
+        <!-- colazione -->
         <target id="w60"/>
       </span>
     </term>
     <term lemma="con" morphofeat="PREP" pos="P" tid="t61" type="">
       <span>
-        <!--con-->
+        <!-- con -->
         <target id="w61"/>
       </span>
     </term>
     <term lemma="frutta" morphofeat="NOU~CAFI" pos="N" tid="t62" type="">
       <span>
-        <!--frutta-->
+        <!-- frutta -->
         <target id="w62"/>
       </span>
     </term>
     <term lemma="e" morphofeat="CONJ" pos="Q" tid="t63" type="">
       <span>
-        <!--e-->
+        <!-- e -->
         <target id="w63"/>
       </span>
     </term>
     <term lemma="cornetto" morphofeat="NOU~CPMP" pos="N" tid="t64" type="">
       <span>
-        <!--cornetti-->
+        <!-- cornetti -->
         <target id="w64"/>
       </span>
     </term>
     <term lemma="." morphofeat="." pos="O" tid="t65" type="">
       <span>
-        <!--.-->
+        <!-- . -->
         <target id="w65"/>
       </span>
     </term>
