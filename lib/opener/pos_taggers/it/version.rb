@@ -1,7 +1,7 @@
 module Opener
   module POSTaggers
     class IT
-      VERSION = "0.9.0"
+      VERSION = "1.0.0"
     end
   end
 end
