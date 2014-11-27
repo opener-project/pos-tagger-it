@@ -12,5 +12,5 @@ Feature: Using a italian tokenized file as input and a postagged file as an outp
     And I put them through the kernel
     Then the output should match the fixture "<output_file>"
   Examples:
-    | language | filename    | input_file  | output_file                  |
-    | it       |             | italian_tokenized_input.kaf | italian_postagged_output.kaf |
+    | language | input_file                  | output_file                  |
+    | it       | italian_tokenized_input.kaf | italian_postagged_output.kaf |
