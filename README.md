@@ -1,5 +1,3 @@
-[![Build Status](https://drone.io/github.com/opener-project/pos-tagger-it/status.png)](https://drone.io/github.com/opener-project/pos-tagger-it/latest)
-
 # Italian POS Tagger
 
 This repository contains the source code for the Italian POS tagger of the
